@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: dim_date
+    tests:
+      - not_null: {column_name: date_key}
+      - unique:   {column_name: date_key}
+  - name: dim_product
+    tests:
+      - not_null: {column_name: product_sk}
+      - unique:   {column_name: product_sk}
+  - name: dim_customer
+    tests:
+      - not_null: {column_name: customer_sk}
+      - unique:   {column_name: customer_sk}
+  - name: dim_reseller
+    tests:
+      - not_null: {column_name: reseller_sk}
+      - unique:   {column_name: reseller_sk}
+  - name: fct_sales
+    tests:
+      - not_null: {column_name: salesorderlinekey}
+      - unique:   {column_name: salesorderlinekey}

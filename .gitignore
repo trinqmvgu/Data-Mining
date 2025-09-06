@@ -1,0 +1,11 @@
+# ignore everything at root
+/*
+
+# keep these two folders
+!/projects/
+!/diagram/
+
+# (optional) keep a few root files if you need them
+!.gitignore
+!.gitattributes
+!/README.md

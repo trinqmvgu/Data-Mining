@@ -1,0 +1,28 @@
+name: 'bi_dw'
+version: '1.0.0'
+profile: 'bi_class_snowflake'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets: ["target","dbt_packages"]
+
+models:
+  bi_dw:
+    +schema: DW
+    staging:
+      +schema: STAGING
+      +materialized: view
+    mart:
+      +schema: DW
+      +materialized: table
+
+vars:
+  surrogate_key_treat_nulls_as_empty_strings: true
+
+on-run-start:
+  - "alter session set DATE_INPUT_FORMAT = 'AUTO';"

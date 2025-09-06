@@ -1,0 +1,1 @@
+alter session set DATE_INPUT_FORMAT = 'AUTO';
