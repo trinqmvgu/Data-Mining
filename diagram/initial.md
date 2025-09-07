@@ -1,8 +1,8 @@
 ```mermaid
 erDiagram
     SALES_DATA {
-      NUMBER  SalesOrderLineKey PK
-      STRING  SalesOrderNumber FK
+      NUMBER  SalesOrderLineKey
+      STRING  SalesOrderNumber
       NUMBER  ResellerKey
       NUMBER  CustomerKey
       NUMBER  ProductKey
@@ -18,43 +18,40 @@ erDiagram
       NUMBER  Total_Product_Cost
       NUMBER  Sales_Amount
     }
-
     SALES_ORDER_DATA {
-      STRING  SalesOrderNumber PK
+      STRING  SalesOrderNumber
       NUMBER  OrderDateKey
       NUMBER  DueDateKey
       NUMBER  ShipDateKey
       STRING  Channel
     }
-
     RESELLER_DATA {
-      NUMBER  ResellerKey PK
+      NUMBER  ResellerKey
       STRING  ResellerName
       STRING  BusinessType
     }
-
     CUSTOMER_DATA {
-      NUMBER  CustomerKey PK
+      NUMBER  CustomerKey
       STRING  CustomerName
       STRING  Email
     }
 
     PRODUCT_DATA {
-      NUMBER  ProductKey PK
+      NUMBER  ProductKey
       STRING  ProductName
       STRING  Color
       STRING  Size
     }
 
     SALES_TERRITORY_DATA {
-      NUMBER  SalesTerritoryKey PK
+      NUMBER  SalesTerritoryKey
       STRING  Territory
       STRING  Country
       STRING  Region
     }
 
     DATE_DATA {
-      NUMBER  DateKey PK
+      NUMBER  DateKey
       DATE    Date
       NUMBER  Day
       NUMBER  Month

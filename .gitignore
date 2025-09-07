@@ -4,6 +4,8 @@
 # keep these two folders
 !/projects/
 !/diagram/
+!/bi_dw/
+
 
 # (optional) keep a few root files if you need them
 !.gitignore
