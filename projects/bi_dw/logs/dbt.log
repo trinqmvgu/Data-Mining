@@ -1167,3 +1167,1113 @@ having count(*) > 1
 [0m17:04:02.284026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1081aae50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c632b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b2b8b0>]}
 [0m17:04:02.284308 [debug] [MainThread]: Flushing usage events
 [0m17:04:04.099594 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:00:44.113758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c3eedf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d47e160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d47e430>]}
+
+
+============================== 22:00:44.116675 | 34054e0b-a867-41ae-82f9-2db51146bc12 ==============================
+[0m22:00:44.116675 [info ] [MainThread]: Running with dbt=1.10.11
+[0m22:00:44.117039 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'write_json': 'True', 'printer_width': '80', 'quiet': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error': 'None', 'profiles_dir': '/Users/nguyentri/.dbt', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'version_check': 'True', 'invocation_command': 'dbt run --select path:models/staging/stg_sales_territory.sql', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'empty': 'False', 'debug': 'False', 'partial_parse': 'True', 'static_parser': 'True', 'log_path': '/Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/logs'}
+[0m22:00:44.433736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '34054e0b-a867-41ae-82f9-2db51146bc12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e105f70>]}
+[0m22:00:44.468840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '34054e0b-a867-41ae-82f9-2db51146bc12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e02b490>]}
+[0m22:00:44.469500 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:00:44.577176 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m22:00:44.697726 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:00:44.697982 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:00:44.737833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '34054e0b-a867-41ae-82f9-2db51146bc12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e737130>]}
+[0m22:00:44.815686 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m22:00:44.820974 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m22:00:44.833317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '34054e0b-a867-41ae-82f9-2db51146bc12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e737610>]}
+[0m22:00:44.833616 [info ] [MainThread]: Found 14 models, 1 operation, 10 data tests, 7 sources, 594 macros
+[0m22:00:44.833835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '34054e0b-a867-41ae-82f9-2db51146bc12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e757100>]}
+[0m22:00:44.834875 [info ] [MainThread]: 
+[0m22:00:44.835093 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:00:44.835267 [info ] [MainThread]: 
+[0m22:00:44.835547 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:00:44.835990 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS'
+[0m22:00:44.875369 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS"
+[0m22:00:44.875616 [debug] [ThreadPool]: On list_BI_CLASS: show terse schemas in database BI_CLASS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS"} */
+[0m22:00:44.875805 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:01:26.555856 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 41.679 seconds
+[0m22:01:26.568429 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_BI_CLASS, now list_BI_CLASS_STAGING)
+[0m22:01:26.569023 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS_DW'
+[0m22:01:26.583245 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_STAGING"
+[0m22:01:26.587579 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_DW"
+[0m22:01:26.587957 [debug] [ThreadPool]: On list_BI_CLASS_STAGING: show objects in BI_CLASS.STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_STAGING"} */;
+[0m22:01:26.588282 [debug] [ThreadPool]: On list_BI_CLASS_DW: show objects in BI_CLASS.DW
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_DW"} */;
+[0m22:01:26.588839 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:01:26.702513 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.114 seconds
+[0m22:01:27.578523 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.989 seconds
+[0m22:01:27.585721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '34054e0b-a867-41ae-82f9-2db51146bc12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e809430>]}
+[0m22:01:27.596413 [debug] [MainThread]: Writing injected SQL for node "operation.bi_dw.bi_dw-on-run-start-0"
+[0m22:01:27.601043 [info ] [MainThread]: 1 of 1 START hook: bi_dw.on-run-start.0 ........................................ [RUN]
+[0m22:01:27.601545 [debug] [MainThread]: Using snowflake connection "master"
+[0m22:01:27.601840 [debug] [MainThread]: On master: alter session set DATE_INPUT_FORMAT = 'AUTO'
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "master"} */;
+[0m22:01:27.602113 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:01:28.246924 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.645 seconds
+[0m22:01:28.249708 [info ] [MainThread]: 1 of 1 OK hook: bi_dw.on-run-start.0 ........................................... [[32mOK[0m in 0.66s]
+[0m22:01:28.250350 [info ] [MainThread]: 
+[0m22:01:28.254934 [debug] [Thread-1  ]: Began running node model.bi_dw.stg_sales_territory
+[0m22:01:28.255959 [info ] [Thread-1  ]: 1 of 1 START sql view model STAGING.stg_sales_territory ........................ [RUN]
+[0m22:01:28.256846 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_BI_CLASS_STAGING, now model.bi_dw.stg_sales_territory)
+[0m22:01:28.257408 [debug] [Thread-1  ]: Began compiling node model.bi_dw.stg_sales_territory
+[0m22:01:28.262289 [debug] [Thread-1  ]: Writing injected SQL for node "model.bi_dw.stg_sales_territory"
+[0m22:01:28.263498 [debug] [Thread-1  ]: Began executing node model.bi_dw.stg_sales_territory
+[0m22:01:28.289128 [debug] [Thread-1  ]: Writing runtime sql for node "model.bi_dw.stg_sales_territory"
+[0m22:01:28.290049 [debug] [Thread-1  ]: Using snowflake connection "model.bi_dw.stg_sales_territory"
+[0m22:01:28.290317 [debug] [Thread-1  ]: On model.bi_dw.stg_sales_territory: create or replace   view BI_CLASS.STAGING.stg_sales_territory
+  
+  
+  
+  
+  as (
+    select
+  SALESTERRITORYKEY::varchar as salesterritory_nk,
+  REGION::varchar            as region,
+  COUNTRY::varchar           as country,
+  "GROUP"::varchar           as territory_group
+from BI_CLASS.RAW.SALES_TERRITORY_DATA
+  )
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.stg_sales_territory"} */;
+[0m22:01:28.506215 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.215 seconds
+[0m22:01:28.536328 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34054e0b-a867-41ae-82f9-2db51146bc12', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141fad30>]}
+[0m22:01:28.536834 [info ] [Thread-1  ]: 1 of 1 OK created sql view model STAGING.stg_sales_territory ................... [[32mSUCCESS 1[0m in 0.28s]
+[0m22:01:28.537381 [debug] [Thread-1  ]: Finished running node model.bi_dw.stg_sales_territory
+[0m22:01:28.538258 [debug] [MainThread]: Connection 'master' was left open.
+[0m22:01:28.538673 [debug] [MainThread]: On master: Close
+[0m22:01:28.700832 [debug] [MainThread]: Connection 'model.bi_dw.stg_sales_territory' was left open.
+[0m22:01:28.701209 [debug] [MainThread]: On model.bi_dw.stg_sales_territory: Close
+[0m22:01:28.824898 [debug] [MainThread]: Connection 'list_BI_CLASS_DW' was left open.
+[0m22:01:28.825671 [debug] [MainThread]: On list_BI_CLASS_DW: Close
+[0m22:01:29.198355 [info ] [MainThread]: 
+[0m22:01:29.199574 [info ] [MainThread]: Finished running 1 project hook, 1 view model in 0 hours 0 minutes and 44.36 seconds (44.36s).
+[0m22:01:29.201099 [debug] [MainThread]: Command end result
+[0m22:01:29.243040 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m22:01:29.245747 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m22:01:29.251233 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/run_results.json
+[0m22:01:29.251487 [info ] [MainThread]: 
+[0m22:01:29.251789 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:01:29.252018 [info ] [MainThread]: 
+[0m22:01:29.252266 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m22:01:29.254187 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 45.186356, "process_in_blocks": "0", "process_kernel_time": 0.316441, "process_mem_max_rss": "155549696", "process_out_blocks": "0", "process_user_time": 1.738397}
+[0m22:01:29.254474 [debug] [MainThread]: Command `dbt run` succeeded at 22:01:29.254420 after 45.19 seconds
+[0m22:01:29.254730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c3eedf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10abea790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2e4b80>]}
+[0m22:01:29.254993 [debug] [MainThread]: Flushing usage events
+[0m22:01:31.409269 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:26:28.680879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108226dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092b6190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092b6460>]}
+
+
+============================== 22:26:28.683879 | 1da2d796-26bf-49a4-943f-5983bb4eecb2 ==============================
+[0m22:26:28.683879 [info ] [MainThread]: Running with dbt=1.10.11
+[0m22:26:28.684245 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'no_print': 'None', 'empty': 'False', 'use_colors': 'True', 'profiles_dir': '/Users/nguyentri/.dbt', 'write_json': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'static_parser': 'True', 'log_path': '/Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/logs', 'log_format': 'default', 'warn_error': 'None', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'invocation_command': 'dbt run --select path:models/staging/stg_sales_territory.sql', 'indirect_selection': 'eager', 'debug': 'False', 'cache_selected_only': 'False', 'quiet': 'False', 'introspect': 'True', 'version_check': 'True'}
+[0m22:26:28.989182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1da2d796-26bf-49a4-943f-5983bb4eecb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f3d5e0>]}
+[0m22:26:29.026060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1da2d796-26bf-49a4-943f-5983bb4eecb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10926c4c0>]}
+[0m22:26:29.026889 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:26:29.136119 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m22:26:29.256208 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:26:29.256438 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:26:29.295803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1da2d796-26bf-49a4-943f-5983bb4eecb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a56e130>]}
+[0m22:26:29.371990 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m22:26:29.373719 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m22:26:29.385402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1da2d796-26bf-49a4-943f-5983bb4eecb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0738e0>]}
+[0m22:26:29.385712 [info ] [MainThread]: Found 14 models, 1 operation, 10 data tests, 7 sources, 594 macros
+[0m22:26:29.385930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1da2d796-26bf-49a4-943f-5983bb4eecb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a56a160>]}
+[0m22:26:29.386959 [info ] [MainThread]: 
+[0m22:26:29.387174 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:26:29.387358 [info ] [MainThread]: 
+[0m22:26:29.387650 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:26:29.388112 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS'
+[0m22:26:29.427607 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS"
+[0m22:26:29.427852 [debug] [ThreadPool]: On list_BI_CLASS: show terse schemas in database BI_CLASS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS"} */
+[0m22:26:29.428026 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:27:11.126296 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 41.697 seconds
+[0m22:27:11.140693 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_BI_CLASS, now list_BI_CLASS_DW)
+[0m22:27:11.147745 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS_STAGING'
+[0m22:27:11.168311 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_DW"
+[0m22:27:11.166814 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_STAGING"
+[0m22:27:11.168758 [debug] [ThreadPool]: On list_BI_CLASS_DW: show objects in BI_CLASS.DW
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_DW"} */;
+[0m22:27:11.169026 [debug] [ThreadPool]: On list_BI_CLASS_STAGING: show objects in BI_CLASS.STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_STAGING"} */;
+[0m22:27:11.169470 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:27:11.272886 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.104 seconds
+[0m22:27:11.673651 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.504 seconds
+[0m22:27:11.680555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1da2d796-26bf-49a4-943f-5983bb4eecb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a585760>]}
+[0m22:27:11.690197 [debug] [MainThread]: Writing injected SQL for node "operation.bi_dw.bi_dw-on-run-start-0"
+[0m22:27:11.694922 [info ] [MainThread]: 1 of 1 START hook: bi_dw.on-run-start.0 ........................................ [RUN]
+[0m22:27:11.695482 [debug] [MainThread]: Using snowflake connection "master"
+[0m22:27:11.695809 [debug] [MainThread]: On master: alter session set DATE_INPUT_FORMAT = 'AUTO'
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "master"} */;
+[0m22:27:11.696123 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:27:12.153501 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.457 seconds
+[0m22:27:12.156690 [info ] [MainThread]: 1 of 1 OK hook: bi_dw.on-run-start.0 ........................................... [[32mOK[0m in 0.48s]
+[0m22:27:12.157432 [info ] [MainThread]: 
+[0m22:27:12.161943 [debug] [Thread-1  ]: Began running node model.bi_dw.stg_sales_territory
+[0m22:27:12.162742 [info ] [Thread-1  ]: 1 of 1 START sql view model STAGING.stg_sales_territory ........................ [RUN]
+[0m22:27:12.163486 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_BI_CLASS_DW, now model.bi_dw.stg_sales_territory)
+[0m22:27:12.164085 [debug] [Thread-1  ]: Began compiling node model.bi_dw.stg_sales_territory
+[0m22:27:12.170620 [debug] [Thread-1  ]: Writing injected SQL for node "model.bi_dw.stg_sales_territory"
+[0m22:27:12.171499 [debug] [Thread-1  ]: Began executing node model.bi_dw.stg_sales_territory
+[0m22:27:12.199550 [debug] [Thread-1  ]: Writing runtime sql for node "model.bi_dw.stg_sales_territory"
+[0m22:27:12.200468 [debug] [Thread-1  ]: Using snowflake connection "model.bi_dw.stg_sales_territory"
+[0m22:27:12.200786 [debug] [Thread-1  ]: On model.bi_dw.stg_sales_territory: create or replace   view BI_CLASS.STAGING.stg_sales_territory
+  
+  
+  
+  
+  as (
+    select
+  SALESTERRITORYKEY::varchar as salesterritory_nk,
+  REGION::varchar            as region,
+  COUNTRY::varchar           as country,
+  "GROUP"::varchar           as territory_group
+from BI_CLASS.RAW.SALES_TERRITORY_DATA
+  )
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.stg_sales_territory"} */;
+[0m22:27:12.356560 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01bedf3f-3201-eb78-000f-9c9a0001bab6
+[0m22:27:12.357009 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 11 at position 2
+invalid identifier 'GROUP'
+[0m22:27:12.366016 [debug] [Thread-1  ]: Database Error in model stg_sales_territory (models/staging/stg_sales_territory.sql)
+  000904 (42000): SQL compilation error: error line 11 at position 2
+  invalid identifier 'GROUP'
+  compiled code at target/run/bi_dw/models/staging/stg_sales_territory.sql
+[0m22:27:12.367657 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1da2d796-26bf-49a4-943f-5983bb4eecb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110008a90>]}
+[0m22:27:12.368187 [error] [Thread-1  ]: 1 of 1 ERROR creating sql view model STAGING.stg_sales_territory ............... [[31mERROR[0m in 0.20s]
+[0m22:27:12.368656 [debug] [Thread-1  ]: Finished running node model.bi_dw.stg_sales_territory
+[0m22:27:12.369050 [debug] [Thread-7  ]: Marking all children of 'model.bi_dw.stg_sales_territory' to be skipped because of status 'error'.  Reason: Database Error in model stg_sales_territory (models/staging/stg_sales_territory.sql)
+  000904 (42000): SQL compilation error: error line 11 at position 2
+  invalid identifier 'GROUP'
+  compiled code at target/run/bi_dw/models/staging/stg_sales_territory.sql.
+[0m22:27:12.369876 [debug] [MainThread]: Connection 'master' was left open.
+[0m22:27:12.370162 [debug] [MainThread]: On master: Close
+[0m22:27:12.507498 [debug] [MainThread]: Connection 'model.bi_dw.stg_sales_territory' was left open.
+[0m22:27:12.508197 [debug] [MainThread]: On model.bi_dw.stg_sales_territory: Close
+[0m22:27:12.646030 [debug] [MainThread]: Connection 'list_BI_CLASS_STAGING' was left open.
+[0m22:27:12.647156 [debug] [MainThread]: On list_BI_CLASS_STAGING: Close
+[0m22:27:12.775296 [info ] [MainThread]: 
+[0m22:27:12.775649 [info ] [MainThread]: Finished running 1 project hook, 1 view model in 0 hours 0 minutes and 43.39 seconds (43.39s).
+[0m22:27:12.776229 [debug] [MainThread]: Command end result
+[0m22:27:12.800658 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m22:27:12.802020 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m22:27:12.805961 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/run_results.json
+[0m22:27:12.806153 [info ] [MainThread]: 
+[0m22:27:12.806399 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m22:27:12.806596 [info ] [MainThread]: 
+[0m22:27:12.806826 [error] [MainThread]: [31mFailure in model stg_sales_territory (models/staging/stg_sales_territory.sql)[0m
+[0m22:27:12.807049 [error] [MainThread]:   Database Error in model stg_sales_territory (models/staging/stg_sales_territory.sql)
+  000904 (42000): SQL compilation error: error line 11 at position 2
+  invalid identifier 'GROUP'
+  compiled code at target/run/bi_dw/models/staging/stg_sales_territory.sql
+[0m22:27:12.807227 [info ] [MainThread]: 
+[0m22:27:12.807430 [info ] [MainThread]:   compiled code at target/compiled/bi_dw/models/staging/stg_sales_territory.sql
+[0m22:27:12.807605 [info ] [MainThread]: 
+[0m22:27:12.807796 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=2
+[0m22:27:12.809235 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 44.17427, "process_in_blocks": "0", "process_kernel_time": 0.306716, "process_mem_max_rss": "162758656", "process_out_blocks": "0", "process_user_time": 1.769515}
+[0m22:27:12.809472 [debug] [MainThread]: Command `dbt run` failed at 22:27:12.809428 after 44.17 seconds
+[0m22:27:12.809707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108226dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f3d5e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f66070>]}
+[0m22:27:12.809932 [debug] [MainThread]: Flushing usage events
+[0m22:27:14.809856 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:29:00.643373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c73ae80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7ca220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7ca4f0>]}
+
+
+============================== 22:29:00.646505 | e05630f7-5eea-4238-809c-22ce28abb498 ==============================
+[0m22:29:00.646505 [info ] [MainThread]: Running with dbt=1.10.11
+[0m22:29:00.646869 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'debug': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'False', 'warn_error': 'None', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'profiles_dir': '/Users/nguyentri/.dbt', 'version_check': 'True', 'introspect': 'True', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'log_path': '/Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/logs', 'target_path': 'None', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'quiet': 'False', 'partial_parse': 'True', 'log_cache_events': 'False', 'static_parser': 'True', 'printer_width': '80', 'invocation_command': 'dbt run --select path:models/staging/stg_sales_territory.sql'}
+[0m22:29:00.943223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e05630f7-5eea-4238-809c-22ce28abb498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d79b6a0>]}
+[0m22:29:00.978199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e05630f7-5eea-4238-809c-22ce28abb498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e57ff10>]}
+[0m22:29:00.979472 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:29:01.088441 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m22:29:01.205666 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m22:29:01.206059 [debug] [MainThread]: Partial parsing: updated file: bi_dw://models/staging/stg_sales_territory.sql
+[0m22:29:01.371540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e05630f7-5eea-4238-809c-22ce28abb498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eca3130>]}
+[0m22:29:01.444805 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m22:29:01.446129 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m22:29:01.457833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e05630f7-5eea-4238-809c-22ce28abb498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e897b80>]}
+[0m22:29:01.458148 [info ] [MainThread]: Found 14 models, 1 operation, 10 data tests, 7 sources, 594 macros
+[0m22:29:01.458369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e05630f7-5eea-4238-809c-22ce28abb498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ec02cd0>]}
+[0m22:29:01.459420 [info ] [MainThread]: 
+[0m22:29:01.459646 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:29:01.459824 [info ] [MainThread]: 
+[0m22:29:01.460111 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:29:01.460568 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS'
+[0m22:29:01.498214 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS"
+[0m22:29:01.498462 [debug] [ThreadPool]: On list_BI_CLASS: show terse schemas in database BI_CLASS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS"} */
+[0m22:29:01.498639 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:29:49.123074 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 47.623 seconds
+[0m22:29:49.136125 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_BI_CLASS, now list_BI_CLASS_STAGING)
+[0m22:29:49.143166 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS_DW'
+[0m22:29:49.161852 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_DW"
+[0m22:29:49.163544 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_STAGING"
+[0m22:29:49.163818 [debug] [ThreadPool]: On list_BI_CLASS_DW: show objects in BI_CLASS.DW
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_DW"} */;
+[0m22:29:49.164084 [debug] [ThreadPool]: On list_BI_CLASS_STAGING: show objects in BI_CLASS.STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_STAGING"} */;
+[0m22:29:49.164331 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:29:49.306277 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.142 seconds
+[0m22:29:49.955217 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.790 seconds
+[0m22:29:49.964368 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e05630f7-5eea-4238-809c-22ce28abb498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e5f0e20>]}
+[0m22:29:49.977762 [debug] [MainThread]: Writing injected SQL for node "operation.bi_dw.bi_dw-on-run-start-0"
+[0m22:29:49.983240 [info ] [MainThread]: 1 of 1 START hook: bi_dw.on-run-start.0 ........................................ [RUN]
+[0m22:29:49.983962 [debug] [MainThread]: Using snowflake connection "master"
+[0m22:29:49.984393 [debug] [MainThread]: On master: alter session set DATE_INPUT_FORMAT = 'AUTO'
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "master"} */;
+[0m22:29:49.984734 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:29:51.437530 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.453 seconds
+[0m22:29:51.439817 [info ] [MainThread]: 1 of 1 OK hook: bi_dw.on-run-start.0 ........................................... [[32mOK[0m in 1.47s]
+[0m22:29:51.440445 [info ] [MainThread]: 
+[0m22:29:51.445061 [debug] [Thread-1  ]: Began running node model.bi_dw.stg_sales_territory
+[0m22:29:51.445835 [info ] [Thread-1  ]: 1 of 1 START sql view model STAGING.stg_sales_territory ........................ [RUN]
+[0m22:29:51.446480 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_BI_CLASS_STAGING, now model.bi_dw.stg_sales_territory)
+[0m22:29:51.446987 [debug] [Thread-1  ]: Began compiling node model.bi_dw.stg_sales_territory
+[0m22:29:51.453403 [debug] [Thread-1  ]: Writing injected SQL for node "model.bi_dw.stg_sales_territory"
+[0m22:29:51.454182 [debug] [Thread-1  ]: Began executing node model.bi_dw.stg_sales_territory
+[0m22:29:51.482882 [debug] [Thread-1  ]: Writing runtime sql for node "model.bi_dw.stg_sales_territory"
+[0m22:29:51.483802 [debug] [Thread-1  ]: Using snowflake connection "model.bi_dw.stg_sales_territory"
+[0m22:29:51.484105 [debug] [Thread-1  ]: On model.bi_dw.stg_sales_territory: create or replace   view BI_CLASS.STAGING.stg_sales_territory
+  
+  
+  
+  
+  as (
+    select
+  SALESTERRITORYKEY::varchar as salesterritory_nk,
+  REGION::varchar            as region,
+  COUNTRY::varchar           as country,
+  "Group"::varchar           as territory_group
+from BI_CLASS.RAW.SALES_TERRITORY_DATA
+  )
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.stg_sales_territory"} */;
+[0m22:29:51.683246 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.199 seconds
+[0m22:29:51.713358 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e05630f7-5eea-4238-809c-22ce28abb498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11462cdc0>]}
+[0m22:29:51.713984 [info ] [Thread-1  ]: 1 of 1 OK created sql view model STAGING.stg_sales_territory ................... [[32mSUCCESS 1[0m in 0.27s]
+[0m22:29:51.714514 [debug] [Thread-1  ]: Finished running node model.bi_dw.stg_sales_territory
+[0m22:29:51.715458 [debug] [MainThread]: Connection 'master' was left open.
+[0m22:29:51.715733 [debug] [MainThread]: On master: Close
+[0m22:29:51.894677 [debug] [MainThread]: Connection 'model.bi_dw.stg_sales_territory' was left open.
+[0m22:29:51.895853 [debug] [MainThread]: On model.bi_dw.stg_sales_territory: Close
+[0m22:29:52.029807 [debug] [MainThread]: Connection 'list_BI_CLASS_DW' was left open.
+[0m22:29:52.030651 [debug] [MainThread]: On list_BI_CLASS_DW: Close
+[0m22:29:52.167763 [info ] [MainThread]: 
+[0m22:29:52.169010 [info ] [MainThread]: Finished running 1 project hook, 1 view model in 0 hours 0 minutes and 50.71 seconds (50.71s).
+[0m22:29:52.170659 [debug] [MainThread]: Command end result
+[0m22:29:52.211042 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m22:29:52.212713 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m22:29:52.217791 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/run_results.json
+[0m22:29:52.218044 [info ] [MainThread]: 
+[0m22:29:52.218343 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:29:52.218574 [info ] [MainThread]: 
+[0m22:29:52.218810 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m22:29:52.220533 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 51.62112, "process_in_blocks": "0", "process_kernel_time": 0.298098, "process_mem_max_rss": "154812416", "process_out_blocks": "0", "process_user_time": 1.897202}
+[0m22:29:52.220817 [debug] [MainThread]: Command `dbt run` succeeded at 22:29:52.220762 after 51.62 seconds
+[0m22:29:52.221072 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c73ae80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e57ff10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eb2c400>]}
+[0m22:29:52.221337 [debug] [MainThread]: Flushing usage events
+[0m22:29:54.461007 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:39:58.661431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b27d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10abb61c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10abb6490>]}
+
+
+============================== 22:39:58.664361 | 6aa013a6-657e-4f2d-92d3-ed2dff6b3873 ==============================
+[0m22:39:58.664361 [info ] [MainThread]: Running with dbt=1.10.11
+[0m22:39:58.664716 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'no_print': 'None', 'use_colors': 'True', 'log_format': 'default', 'quiet': 'False', 'log_path': '/Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/logs', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'invocation_command': 'dbt run --select path:models/mart/dim_sales_territory.sql', 'warn_error': 'None', 'cache_selected_only': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'partial_parse': 'True', 'target_path': 'None', 'static_parser': 'True', 'log_cache_events': 'False', 'empty': 'False', 'fail_fast': 'False', 'introspect': 'True', 'profiles_dir': '/Users/nguyentri/.dbt'}
+[0m22:39:58.995327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6aa013a6-657e-4f2d-92d3-ed2dff6b3873', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ca5c40>]}
+[0m22:39:59.035611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6aa013a6-657e-4f2d-92d3-ed2dff6b3873', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b83b5b0>]}
+[0m22:39:59.036776 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:39:59.287980 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m22:39:59.409437 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:39:59.409701 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:39:59.450052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6aa013a6-657e-4f2d-92d3-ed2dff6b3873', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be6d130>]}
+[0m22:39:59.527510 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m22:39:59.529336 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m22:39:59.541081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6aa013a6-657e-4f2d-92d3-ed2dff6b3873', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be6d9a0>]}
+[0m22:39:59.541394 [info ] [MainThread]: Found 14 models, 1 operation, 10 data tests, 7 sources, 594 macros
+[0m22:39:59.541615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6aa013a6-657e-4f2d-92d3-ed2dff6b3873', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be8e190>]}
+[0m22:39:59.542675 [info ] [MainThread]: 
+[0m22:39:59.542899 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:39:59.543079 [info ] [MainThread]: 
+[0m22:39:59.543371 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:39:59.543815 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS'
+[0m22:39:59.595611 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS"
+[0m22:39:59.596072 [debug] [ThreadPool]: On list_BI_CLASS: show terse schemas in database BI_CLASS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS"} */
+[0m22:39:59.596443 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:40:41.216709 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 41.619 seconds
+[0m22:40:41.232240 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_BI_CLASS, now list_BI_CLASS_DW)
+[0m22:40:41.233112 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS_STAGING'
+[0m22:40:41.255509 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_DW"
+[0m22:40:41.260233 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_STAGING"
+[0m22:40:41.260511 [debug] [ThreadPool]: On list_BI_CLASS_DW: show objects in BI_CLASS.DW
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_DW"} */;
+[0m22:40:41.260788 [debug] [ThreadPool]: On list_BI_CLASS_STAGING: show objects in BI_CLASS.STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_STAGING"} */;
+[0m22:40:41.261114 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:40:41.722008 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.461 seconds
+[0m22:40:42.065750 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.804 seconds
+[0m22:40:42.070644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6aa013a6-657e-4f2d-92d3-ed2dff6b3873', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be86970>]}
+[0m22:40:42.081744 [debug] [MainThread]: Writing injected SQL for node "operation.bi_dw.bi_dw-on-run-start-0"
+[0m22:40:42.086570 [info ] [MainThread]: 1 of 1 START hook: bi_dw.on-run-start.0 ........................................ [RUN]
+[0m22:40:42.087231 [debug] [MainThread]: Using snowflake connection "master"
+[0m22:40:42.087599 [debug] [MainThread]: On master: alter session set DATE_INPUT_FORMAT = 'AUTO'
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "master"} */;
+[0m22:40:42.087943 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:40:42.519934 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.431 seconds
+[0m22:40:42.523777 [info ] [MainThread]: 1 of 1 OK hook: bi_dw.on-run-start.0 ........................................... [[32mOK[0m in 0.45s]
+[0m22:40:42.524560 [info ] [MainThread]: 
+[0m22:40:42.528924 [debug] [Thread-1  ]: Began running node model.bi_dw.dim_sales_territory
+[0m22:40:42.529705 [info ] [Thread-1  ]: 1 of 1 START sql table model DW.dim_sales_territory ............................ [RUN]
+[0m22:40:42.530376 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_BI_CLASS_DW, now model.bi_dw.dim_sales_territory)
+[0m22:40:42.531016 [debug] [Thread-1  ]: Began compiling node model.bi_dw.dim_sales_territory
+[0m22:40:42.548735 [debug] [Thread-1  ]: Writing injected SQL for node "model.bi_dw.dim_sales_territory"
+[0m22:40:42.549704 [debug] [Thread-1  ]: Began executing node model.bi_dw.dim_sales_territory
+[0m22:40:42.576265 [debug] [Thread-1  ]: Writing runtime sql for node "model.bi_dw.dim_sales_territory"
+[0m22:40:42.577219 [debug] [Thread-1  ]: Using snowflake connection "model.bi_dw.dim_sales_territory"
+[0m22:40:42.577484 [debug] [Thread-1  ]: On model.bi_dw.dim_sales_territory: create or replace transient table BI_CLASS.DW.dim_sales_territory
+    
+    
+    
+    as (select
+  md5(cast(coalesce(cast(salesterritory_nk as TEXT), '') as TEXT)) as salesterritory_sk,
+  salesterritory_nk, region, country, territory_group
+from BI_CLASS.STAGING.stg_sales_territory
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_sales_territory"} */;
+[0m22:40:43.543990 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.966 seconds
+[0m22:40:43.582220 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6aa013a6-657e-4f2d-92d3-ed2dff6b3873', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111927dc0>]}
+[0m22:40:43.582997 [info ] [Thread-1  ]: 1 of 1 OK created sql table model DW.dim_sales_territory ....................... [[32mSUCCESS 1[0m in 1.05s]
+[0m22:40:43.583608 [debug] [Thread-1  ]: Finished running node model.bi_dw.dim_sales_territory
+[0m22:40:43.584700 [debug] [MainThread]: Connection 'master' was left open.
+[0m22:40:43.585002 [debug] [MainThread]: On master: Close
+[0m22:40:43.716998 [debug] [MainThread]: Connection 'model.bi_dw.dim_sales_territory' was left open.
+[0m22:40:43.717737 [debug] [MainThread]: On model.bi_dw.dim_sales_territory: Close
+[0m22:40:44.372938 [debug] [MainThread]: Connection 'list_BI_CLASS_STAGING' was left open.
+[0m22:40:44.373788 [debug] [MainThread]: On list_BI_CLASS_STAGING: Close
+[0m22:40:44.510387 [info ] [MainThread]: 
+[0m22:40:44.511547 [info ] [MainThread]: Finished running 1 project hook, 1 table model in 0 hours 0 minutes and 44.97 seconds (44.97s).
+[0m22:40:44.513695 [debug] [MainThread]: Command end result
+[0m22:40:44.558298 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m22:40:44.559966 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m22:40:44.565050 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/run_results.json
+[0m22:40:44.565305 [info ] [MainThread]: 
+[0m22:40:44.565613 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:40:44.565860 [info ] [MainThread]: 
+[0m22:40:44.566112 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m22:40:44.567922 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 45.952904, "process_in_blocks": "0", "process_kernel_time": 0.325841, "process_mem_max_rss": "159580160", "process_out_blocks": "0", "process_user_time": 1.866426}
+[0m22:40:44.568212 [debug] [MainThread]: Command `dbt run` succeeded at 22:40:44.568159 after 45.95 seconds
+[0m22:40:44.568470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b27d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b83b5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be6d9a0>]}
+[0m22:40:44.568784 [debug] [MainThread]: Flushing usage events
+[0m22:40:46.559223 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:54:44.622915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bdb2e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ce411c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ce41490>]}
+
+
+============================== 22:54:44.625795 | ec84df51-6855-446a-9312-ac6ce3e8f27f ==============================
+[0m22:54:44.625795 [info ] [MainThread]: Running with dbt=1.10.11
+[0m22:54:44.626150 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'cache_selected_only': 'False', 'no_print': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'fail_fast': 'False', 'write_json': 'True', 'use_experimental_parser': 'False', 'log_path': '/Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/logs', 'log_format': 'default', 'log_cache_events': 'False', 'debug': 'False', 'invocation_command': 'dbt run --select mart', 'target_path': 'None', 'version_check': 'True', 'introspect': 'True', 'empty': 'False', 'partial_parse': 'True', 'indirect_selection': 'eager', 'profiles_dir': '/Users/nguyentri/.dbt', 'warn_error': 'None', 'printer_width': '80'}
+[0m22:54:44.933715 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10daaadc0>]}
+[0m22:54:44.968587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cda04f0>]}
+[0m22:54:44.969226 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m22:54:45.078276 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m22:54:45.199051 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:54:45.199287 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:54:45.238539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0f9130>]}
+[0m22:54:45.314695 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m22:54:45.316456 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m22:54:45.328034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0f9fa0>]}
+[0m22:54:45.328332 [info ] [MainThread]: Found 14 models, 1 operation, 10 data tests, 7 sources, 594 macros
+[0m22:54:45.328553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de05670>]}
+[0m22:54:45.329457 [info ] [MainThread]: 
+[0m22:54:45.329672 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:54:45.329850 [info ] [MainThread]: 
+[0m22:54:45.330137 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m22:54:45.333051 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS'
+[0m22:54:45.373024 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS"
+[0m22:54:45.373267 [debug] [ThreadPool]: On list_BI_CLASS: show terse schemas in database BI_CLASS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS"} */
+[0m22:54:45.373437 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:55:27.114399 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 41.747 seconds
+[0m22:55:27.120680 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_BI_CLASS, now list_BI_CLASS_STAGING)
+[0m22:55:27.121441 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS_DW'
+[0m22:55:27.153775 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_STAGING"
+[0m22:55:27.153376 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_DW"
+[0m22:55:27.154181 [debug] [ThreadPool]: On list_BI_CLASS_STAGING: show objects in BI_CLASS.STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_STAGING"} */;
+[0m22:55:27.154515 [debug] [ThreadPool]: On list_BI_CLASS_DW: show objects in BI_CLASS.DW
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_DW"} */;
+[0m22:55:27.155035 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:55:27.269609 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.115 seconds
+[0m22:55:28.427047 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 1.272 seconds
+[0m22:55:28.433927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a868940>]}
+[0m22:55:28.446031 [debug] [MainThread]: Writing injected SQL for node "operation.bi_dw.bi_dw-on-run-start-0"
+[0m22:55:28.452460 [info ] [MainThread]: 1 of 1 START hook: bi_dw.on-run-start.0 ........................................ [RUN]
+[0m22:55:28.453102 [debug] [MainThread]: Using snowflake connection "master"
+[0m22:55:28.453486 [debug] [MainThread]: On master: alter session set DATE_INPUT_FORMAT = 'AUTO'
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "master"} */;
+[0m22:55:28.453838 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:55:29.118169 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.664 seconds
+[0m22:55:29.121188 [info ] [MainThread]: 1 of 1 OK hook: bi_dw.on-run-start.0 ........................................... [[32mOK[0m in 0.69s]
+[0m22:55:29.121858 [info ] [MainThread]: 
+[0m22:55:29.127826 [debug] [Thread-1  ]: Began running node model.bi_dw.dim_channel
+[0m22:55:29.128596 [debug] [Thread-2  ]: Began running node model.bi_dw.dim_customer
+[0m22:55:29.130185 [debug] [Thread-3  ]: Began running node model.bi_dw.dim_date
+[0m22:55:29.129638 [info ] [Thread-1  ]: 1 of 7 START sql table model DW.dim_channel .................................... [RUN]
+[0m22:55:29.130908 [debug] [Thread-4  ]: Began running node model.bi_dw.dim_product
+[0m22:55:29.131508 [info ] [Thread-2  ]: 2 of 7 START sql table model DW.dim_customer ................................... [RUN]
+[0m22:55:29.132246 [info ] [Thread-3  ]: 3 of 7 START sql table model DW.dim_date ....................................... [RUN]
+[0m22:55:29.132919 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_BI_CLASS_STAGING, now model.bi_dw.dim_channel)
+[0m22:55:29.133804 [info ] [Thread-4  ]: 4 of 7 START sql table model DW.dim_product .................................... [RUN]
+[0m22:55:29.134372 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_BI_CLASS_DW, now model.bi_dw.dim_customer)
+[0m22:55:29.134995 [debug] [Thread-3  ]: Acquiring new snowflake connection 'model.bi_dw.dim_date'
+[0m22:55:29.135914 [debug] [Thread-1  ]: Began compiling node model.bi_dw.dim_channel
+[0m22:55:29.136531 [debug] [Thread-4  ]: Acquiring new snowflake connection 'model.bi_dw.dim_product'
+[0m22:55:29.136996 [debug] [Thread-2  ]: Began compiling node model.bi_dw.dim_customer
+[0m22:55:29.137443 [debug] [Thread-3  ]: Began compiling node model.bi_dw.dim_date
+[0m22:55:29.150496 [debug] [Thread-4  ]: Began compiling node model.bi_dw.dim_product
+[0m22:55:29.155000 [debug] [Thread-1  ]: Writing injected SQL for node "model.bi_dw.dim_channel"
+[0m22:55:29.158605 [debug] [Thread-2  ]: Writing injected SQL for node "model.bi_dw.dim_customer"
+[0m22:55:29.161344 [debug] [Thread-3  ]: Writing injected SQL for node "model.bi_dw.dim_date"
+[0m22:55:29.164453 [debug] [Thread-4  ]: Writing injected SQL for node "model.bi_dw.dim_product"
+[0m22:55:29.165588 [debug] [Thread-2  ]: Began executing node model.bi_dw.dim_customer
+[0m22:55:29.165909 [debug] [Thread-3  ]: Began executing node model.bi_dw.dim_date
+[0m22:55:29.166207 [debug] [Thread-4  ]: Began executing node model.bi_dw.dim_product
+[0m22:55:29.166470 [debug] [Thread-1  ]: Began executing node model.bi_dw.dim_channel
+[0m22:55:29.203426 [debug] [Thread-4  ]: Writing runtime sql for node "model.bi_dw.dim_product"
+[0m22:55:29.207148 [debug] [Thread-3  ]: Writing runtime sql for node "model.bi_dw.dim_date"
+[0m22:55:29.207390 [debug] [Thread-2  ]: Writing runtime sql for node "model.bi_dw.dim_customer"
+[0m22:55:29.209394 [debug] [Thread-1  ]: Writing runtime sql for node "model.bi_dw.dim_channel"
+[0m22:55:29.210249 [debug] [Thread-4  ]: Using snowflake connection "model.bi_dw.dim_product"
+[0m22:55:29.210827 [debug] [Thread-3  ]: Using snowflake connection "model.bi_dw.dim_date"
+[0m22:55:29.211303 [debug] [Thread-2  ]: Using snowflake connection "model.bi_dw.dim_customer"
+[0m22:55:29.211521 [debug] [Thread-4  ]: On model.bi_dw.dim_product: create or replace transient table BI_CLASS.DW.dim_product
+    
+    
+    
+    as (select
+  md5(cast(coalesce(cast(product_nk as TEXT), '') as TEXT)) as product_sk,
+  product_nk, sku, product_name, color, model, subcategory, category,
+  standard_cost, list_price
+from BI_CLASS.STAGING.stg_product
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_product"} */;
+[0m22:55:29.211772 [debug] [Thread-3  ]: On model.bi_dw.dim_date: create or replace transient table BI_CLASS.DW.dim_date
+    
+    
+    
+    as (select
+  date_key::varchar                        as date_key,
+  date_actual                              as date,
+  to_number(to_char(date_actual,'YYYY'))   as year_num,
+  to_number(to_char(date_actual,'MM'))     as month_num,
+  to_number(to_char(date_actual,'DD'))     as day_num,
+  month_key::varchar                       as month_key,
+  fiscal_year,
+  fiscal_quarter,
+  month_label,
+  full_date_text
+from BI_CLASS.STAGING.stg_date
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_date"} */;
+[0m22:55:29.212205 [debug] [Thread-1  ]: Using snowflake connection "model.bi_dw.dim_channel"
+[0m22:55:29.212425 [debug] [Thread-2  ]: On model.bi_dw.dim_customer: create or replace transient table BI_CLASS.DW.dim_customer
+    
+    
+    
+    as (select
+  md5(cast(coalesce(cast(customer_nk as TEXT), '') as TEXT)) as customer_sk,
+  customer_nk, customer_id, customer_name,
+  city, state_province, country_region, postal_code
+from BI_CLASS.STAGING.stg_customer
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_customer"} */;
+[0m22:55:29.212644 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m22:55:29.212845 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m22:55:29.213048 [debug] [Thread-1  ]: On model.bi_dw.dim_channel: create or replace transient table BI_CLASS.DW.dim_channel
+    
+    
+    
+    as (select
+  md5(cast(coalesce(cast(channel as TEXT), '') as TEXT)) as channel_sk,
+  channel
+from (select distinct channel from BI_CLASS.STAGING.stg_sales_order)
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_channel"} */;
+[0m22:55:30.064677 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.850 seconds
+[0m22:55:30.104649 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113bbfee0>]}
+[0m22:55:30.105422 [info ] [Thread-1  ]: 1 of 7 OK created sql table model DW.dim_channel ............................... [[32mSUCCESS 1[0m in 0.97s]
+[0m22:55:30.106011 [debug] [Thread-1  ]: Finished running node model.bi_dw.dim_channel
+[0m22:55:30.106420 [debug] [Thread-1  ]: Began running node model.bi_dw.dim_reseller
+[0m22:55:30.106930 [info ] [Thread-1  ]: 5 of 7 START sql table model DW.dim_reseller ................................... [RUN]
+[0m22:55:30.107408 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bi_dw.dim_channel, now model.bi_dw.dim_reseller)
+[0m22:55:30.107747 [debug] [Thread-1  ]: Began compiling node model.bi_dw.dim_reseller
+[0m22:55:30.111919 [debug] [Thread-1  ]: Writing injected SQL for node "model.bi_dw.dim_reseller"
+[0m22:55:30.112789 [debug] [Thread-1  ]: Began executing node model.bi_dw.dim_reseller
+[0m22:55:30.115939 [debug] [Thread-1  ]: Writing runtime sql for node "model.bi_dw.dim_reseller"
+[0m22:55:30.117079 [debug] [Thread-1  ]: Using snowflake connection "model.bi_dw.dim_reseller"
+[0m22:55:30.117381 [debug] [Thread-1  ]: On model.bi_dw.dim_reseller: create or replace transient table BI_CLASS.DW.dim_reseller
+    
+    
+    
+    as (select
+  md5(cast(coalesce(cast(reseller_nk as TEXT), '') as TEXT)) as reseller_sk,
+  reseller_nk, reseller_id, reseller_name, business_type,
+  city, state_province, country_region, postal_code
+from BI_CLASS.STAGING.stg_reseller
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_reseller"} */;
+[0m22:55:30.138343 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 0.925 seconds
+[0m22:55:30.140049 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113c21e50>]}
+[0m22:55:30.140586 [info ] [Thread-2  ]: 2 of 7 OK created sql table model DW.dim_customer .............................. [[32mSUCCESS 1[0m in 1.01s]
+[0m22:55:30.141059 [debug] [Thread-2  ]: Finished running node model.bi_dw.dim_customer
+[0m22:55:30.141389 [debug] [Thread-2  ]: Began running node model.bi_dw.dim_sales_territory
+[0m22:55:30.141836 [info ] [Thread-2  ]: 6 of 7 START sql table model DW.dim_sales_territory ............................ [RUN]
+[0m22:55:30.142251 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly model.bi_dw.dim_customer, now model.bi_dw.dim_sales_territory)
+[0m22:55:30.142580 [debug] [Thread-2  ]: Began compiling node model.bi_dw.dim_sales_territory
+[0m22:55:30.146156 [debug] [Thread-2  ]: Writing injected SQL for node "model.bi_dw.dim_sales_territory"
+[0m22:55:30.146788 [debug] [Thread-2  ]: Began executing node model.bi_dw.dim_sales_territory
+[0m22:55:30.150561 [debug] [Thread-2  ]: Writing runtime sql for node "model.bi_dw.dim_sales_territory"
+[0m22:55:30.151495 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 0.939 seconds
+[0m22:55:30.153215 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113b5e940>]}
+[0m22:55:30.153898 [debug] [Thread-2  ]: Using snowflake connection "model.bi_dw.dim_sales_territory"
+[0m22:55:30.154310 [info ] [Thread-3  ]: 3 of 7 OK created sql table model DW.dim_date .................................. [[32mSUCCESS 1[0m in 1.02s]
+[0m22:55:30.154733 [debug] [Thread-2  ]: On model.bi_dw.dim_sales_territory: create or replace transient table BI_CLASS.DW.dim_sales_territory
+    
+    
+    
+    as (select
+  md5(cast(coalesce(cast(salesterritory_nk as TEXT), '') as TEXT)) as salesterritory_sk,
+  salesterritory_nk, region, country, territory_group
+from BI_CLASS.STAGING.stg_sales_territory
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_sales_territory"} */;
+[0m22:55:30.155142 [debug] [Thread-3  ]: Finished running node model.bi_dw.dim_date
+[0m22:55:30.484917 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 1.272 seconds
+[0m22:55:30.490439 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113c29970>]}
+[0m22:55:30.491862 [info ] [Thread-4  ]: 4 of 7 OK created sql table model DW.dim_product ............................... [[32mSUCCESS 1[0m in 1.35s]
+[0m22:55:30.492859 [debug] [Thread-4  ]: Finished running node model.bi_dw.dim_product
+[0m22:55:30.651594 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.533 seconds
+[0m22:55:30.656689 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b86aaf0>]}
+[0m22:55:30.657898 [info ] [Thread-1  ]: 5 of 7 OK created sql table model DW.dim_reseller .............................. [[32mSUCCESS 1[0m in 0.55s]
+[0m22:55:30.658837 [debug] [Thread-1  ]: Finished running node model.bi_dw.dim_reseller
+[0m22:55:30.691655 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 0.536 seconds
+[0m22:55:30.695126 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc26550>]}
+[0m22:55:30.696137 [info ] [Thread-2  ]: 6 of 7 OK created sql table model DW.dim_sales_territory ....................... [[32mSUCCESS 1[0m in 0.55s]
+[0m22:55:30.697008 [debug] [Thread-2  ]: Finished running node model.bi_dw.dim_sales_territory
+[0m22:55:30.698084 [debug] [Thread-3  ]: Began running node model.bi_dw.fct_sales
+[0m22:55:30.698883 [info ] [Thread-3  ]: 7 of 7 START sql table model DW.fct_sales ...................................... [RUN]
+[0m22:55:30.699467 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly model.bi_dw.dim_date, now model.bi_dw.fct_sales)
+[0m22:55:30.699933 [debug] [Thread-3  ]: Began compiling node model.bi_dw.fct_sales
+[0m22:55:30.707938 [debug] [Thread-3  ]: Writing injected SQL for node "model.bi_dw.fct_sales"
+[0m22:55:30.708975 [debug] [Thread-3  ]: Began executing node model.bi_dw.fct_sales
+[0m22:55:30.713089 [debug] [Thread-3  ]: Writing runtime sql for node "model.bi_dw.fct_sales"
+[0m22:55:30.715513 [debug] [Thread-3  ]: Using snowflake connection "model.bi_dw.fct_sales"
+[0m22:55:30.715945 [debug] [Thread-3  ]: On model.bi_dw.fct_sales: create or replace transient table BI_CLASS.DW.fct_sales
+    
+    
+    
+    as (with s as (
+  select s.*, so.channel, so.sales_order, so.sales_order_line
+  from BI_CLASS.STAGING.stg_sales s
+  left join BI_CLASS.STAGING.stg_sales_order so
+    on so.salesorderlinekey = s.salesorderlinekey
+)
+select
+  s.salesorderlinekey,
+
+  od.date_key as order_date_key,
+  dd.date_key as due_date_key,
+  sd.date_key as ship_date_key,
+
+  dp.product_sk,
+  dc.customer_sk,
+  dr.reseller_sk,
+  dst.salesterritory_sk,
+  dch.channel_sk,
+
+  s.sales_order,
+  s.sales_order_line,
+
+  s.order_qty,
+  s.unit_price,
+  s.extended_amount,
+  s.unit_price_discount_pct,
+  s.product_standard_cost,
+  s.total_product_cost,
+  s.sales_amount,
+  (s.sales_amount - s.total_product_cost) as gross_profit
+from s
+left join BI_CLASS.DW.dim_product         dp  on dp.product_nk         = s.product_nk
+left join BI_CLASS.DW.dim_customer        dc  on dc.customer_nk        = s.customer_nk
+left join BI_CLASS.DW.dim_reseller        dr  on dr.reseller_nk        = s.reseller_nk
+left join BI_CLASS.DW.dim_sales_territory dst on dst.salesterritory_nk = s.salesterritory_nk
+left join BI_CLASS.DW.dim_channel         dch on dch.channel           = s.channel
+left join BI_CLASS.DW.dim_date            od  on od.date_key           = s.order_date_key_raw
+left join BI_CLASS.DW.dim_date            dd  on dd.date_key           = s.due_date_key_raw
+left join BI_CLASS.DW.dim_date            sd  on sd.date_key           = s.ship_date_key_raw
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.fct_sales"} */;
+[0m22:55:33.075973 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 2.359 seconds
+[0m22:55:33.082002 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec84df51-6855-446a-9312-ac6ce3e8f27f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113d2d0d0>]}
+[0m22:55:33.083450 [info ] [Thread-3  ]: 7 of 7 OK created sql table model DW.fct_sales ................................. [[32mSUCCESS 1[0m in 2.38s]
+[0m22:55:33.084427 [debug] [Thread-3  ]: Finished running node model.bi_dw.fct_sales
+[0m22:55:33.086554 [debug] [MainThread]: Connection 'master' was left open.
+[0m22:55:33.087042 [debug] [MainThread]: On master: Close
+[0m22:55:33.330457 [debug] [MainThread]: Connection 'model.bi_dw.dim_reseller' was left open.
+[0m22:55:33.331708 [debug] [MainThread]: On model.bi_dw.dim_reseller: Close
+[0m22:55:33.480114 [debug] [MainThread]: Connection 'model.bi_dw.dim_sales_territory' was left open.
+[0m22:55:33.481312 [debug] [MainThread]: On model.bi_dw.dim_sales_territory: Close
+[0m22:55:33.611492 [debug] [MainThread]: Connection 'model.bi_dw.fct_sales' was left open.
+[0m22:55:33.612593 [debug] [MainThread]: On model.bi_dw.fct_sales: Close
+[0m22:55:33.742396 [debug] [MainThread]: Connection 'model.bi_dw.dim_product' was left open.
+[0m22:55:33.742871 [debug] [MainThread]: On model.bi_dw.dim_product: Close
+[0m22:55:33.865556 [info ] [MainThread]: 
+[0m22:55:33.866617 [info ] [MainThread]: Finished running 1 project hook, 7 table models in 0 hours 0 minutes and 48.54 seconds (48.54s).
+[0m22:55:33.869991 [debug] [MainThread]: Command end result
+[0m22:55:33.913222 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m22:55:33.914868 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m22:55:33.920612 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/run_results.json
+[0m22:55:33.920887 [info ] [MainThread]: 
+[0m22:55:33.921179 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:55:33.921415 [info ] [MainThread]: 
+[0m22:55:33.921663 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=8
+[0m22:55:33.923702 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 49.351643, "process_in_blocks": "0", "process_kernel_time": 0.34219, "process_mem_max_rss": "166313984", "process_out_blocks": "0", "process_user_time": 2.08697}
+[0m22:55:33.923984 [debug] [MainThread]: Command `dbt run` succeeded at 22:55:33.923930 after 49.35 seconds
+[0m22:55:33.924241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bdb2e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cda04f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b335040>]}
+[0m22:55:33.924506 [debug] [MainThread]: Flushing usage events
+[0m22:55:36.005446 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:26:07.928009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e6adf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aefa160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aefa430>]}
+
+
+============================== 23:26:07.930933 | 4737bea1-1159-4559-b7d4-f82bc2724381 ==============================
+[0m23:26:07.930933 [info ] [MainThread]: Running with dbt=1.10.11
+[0m23:26:07.931307 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_colors': 'True', 'warn_error': 'None', 'target_path': 'None', 'log_path': '/Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/logs', 'cache_selected_only': 'False', 'quiet': 'False', 'introspect': 'True', 'static_parser': 'True', 'debug': 'False', 'partial_parse': 'True', 'printer_width': '80', 'write_json': 'True', 'invocation_command': 'dbt run --select path:models/staging/stg_sales_order.sql', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'no_print': 'None', 'empty': 'False', 'log_format': 'default', 'profiles_dir': '/Users/nguyentri/.dbt', 'version_check': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:26:08.243506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4737bea1-1159-4559-b7d4-f82bc2724381', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb81f70>]}
+[0m23:26:08.278268 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4737bea1-1159-4559-b7d4-f82bc2724381', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10baa6490>]}
+[0m23:26:08.278917 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m23:26:08.387278 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m23:26:08.506546 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:26:08.506776 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:26:08.545719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4737bea1-1159-4559-b7d4-f82bc2724381', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1b1130>]}
+[0m23:26:08.622126 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m23:26:08.624220 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m23:26:08.635674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4737bea1-1159-4559-b7d4-f82bc2724381', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1dda00>]}
+[0m23:26:08.635983 [info ] [MainThread]: Found 14 models, 1 operation, 10 data tests, 7 sources, 594 macros
+[0m23:26:08.636202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4737bea1-1159-4559-b7d4-f82bc2724381', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1d2160>]}
+[0m23:26:08.637278 [info ] [MainThread]: 
+[0m23:26:08.637500 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:26:08.637674 [info ] [MainThread]: 
+[0m23:26:08.637979 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m23:26:08.638439 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS'
+[0m23:26:08.677408 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS"
+[0m23:26:08.677654 [debug] [ThreadPool]: On list_BI_CLASS: show terse schemas in database BI_CLASS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS"} */
+[0m23:26:08.677828 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:26:50.263920 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 41.585 seconds
+[0m23:26:50.279767 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_BI_CLASS, now list_BI_CLASS_STAGING)
+[0m23:26:50.280753 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS_DW'
+[0m23:26:50.303700 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_STAGING"
+[0m23:26:50.308577 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_DW"
+[0m23:26:50.308862 [debug] [ThreadPool]: On list_BI_CLASS_STAGING: show objects in BI_CLASS.STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_STAGING"} */;
+[0m23:26:50.309145 [debug] [ThreadPool]: On list_BI_CLASS_DW: show objects in BI_CLASS.DW
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_DW"} */;
+[0m23:26:50.309610 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:26:50.464413 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.155 seconds
+[0m23:26:50.983388 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.673 seconds
+[0m23:26:50.990980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4737bea1-1159-4559-b7d4-f82bc2724381', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb62e50>]}
+[0m23:26:51.005849 [debug] [MainThread]: Writing injected SQL for node "operation.bi_dw.bi_dw-on-run-start-0"
+[0m23:26:51.011497 [info ] [MainThread]: 1 of 1 START hook: bi_dw.on-run-start.0 ........................................ [RUN]
+[0m23:26:51.012216 [debug] [MainThread]: Using snowflake connection "master"
+[0m23:26:51.012637 [debug] [MainThread]: On master: alter session set DATE_INPUT_FORMAT = 'AUTO'
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "master"} */;
+[0m23:26:51.013614 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:26:51.441337 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.427 seconds
+[0m23:26:51.444979 [info ] [MainThread]: 1 of 1 OK hook: bi_dw.on-run-start.0 ........................................... [[32mOK[0m in 0.45s]
+[0m23:26:51.445918 [info ] [MainThread]: 
+[0m23:26:51.453109 [debug] [Thread-1  ]: Began running node model.bi_dw.stg_sales_order
+[0m23:26:51.454253 [info ] [Thread-1  ]: 1 of 1 START sql view model STAGING.stg_sales_order ............................ [RUN]
+[0m23:26:51.455159 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_BI_CLASS_STAGING, now model.bi_dw.stg_sales_order)
+[0m23:26:51.455789 [debug] [Thread-1  ]: Began compiling node model.bi_dw.stg_sales_order
+[0m23:26:51.462223 [debug] [Thread-1  ]: Writing injected SQL for node "model.bi_dw.stg_sales_order"
+[0m23:26:51.463793 [debug] [Thread-1  ]: Began executing node model.bi_dw.stg_sales_order
+[0m23:26:51.494328 [debug] [Thread-1  ]: Writing runtime sql for node "model.bi_dw.stg_sales_order"
+[0m23:26:51.495303 [debug] [Thread-1  ]: Using snowflake connection "model.bi_dw.stg_sales_order"
+[0m23:26:51.495600 [debug] [Thread-1  ]: On model.bi_dw.stg_sales_order: create or replace   view BI_CLASS.STAGING.stg_sales_order
+  
+  
+  
+  
+  as (
+    select
+  CHANNEL::varchar           as channel,
+  SALES_ORDER::varchar       as sales_order,
+  SALES_ORDER_LINE::varchar  as sales_order_line,
+  SALESORDERLINEKEY::varchar as salesorderlinekey
+from BI_CLASS.RAW.SALES_ORDER_DATA
+  )
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.stg_sales_order"} */;
+[0m23:26:51.668644 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.172 seconds
+[0m23:26:51.706851 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4737bea1-1159-4559-b7d4-f82bc2724381', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111c64c10>]}
+[0m23:26:51.707705 [info ] [Thread-1  ]: 1 of 1 OK created sql view model STAGING.stg_sales_order ....................... [[32mSUCCESS 1[0m in 0.25s]
+[0m23:26:51.708373 [debug] [Thread-1  ]: Finished running node model.bi_dw.stg_sales_order
+[0m23:26:51.709499 [debug] [MainThread]: Connection 'master' was left open.
+[0m23:26:51.709884 [debug] [MainThread]: On master: Close
+[0m23:26:52.110951 [debug] [MainThread]: Connection 'model.bi_dw.stg_sales_order' was left open.
+[0m23:26:52.111405 [debug] [MainThread]: On model.bi_dw.stg_sales_order: Close
+[0m23:26:52.248703 [debug] [MainThread]: Connection 'list_BI_CLASS_DW' was left open.
+[0m23:26:52.249428 [debug] [MainThread]: On list_BI_CLASS_DW: Close
+[0m23:26:52.603383 [info ] [MainThread]: 
+[0m23:26:52.604842 [info ] [MainThread]: Finished running 1 project hook, 1 view model in 0 hours 0 minutes and 43.97 seconds (43.97s).
+[0m23:26:52.606697 [debug] [MainThread]: Command end result
+[0m23:26:52.650911 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m23:26:52.652769 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m23:26:52.658686 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/run_results.json
+[0m23:26:52.658969 [info ] [MainThread]: 
+[0m23:26:52.659284 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:26:52.659524 [info ] [MainThread]: 
+[0m23:26:52.659770 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m23:26:52.661770 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 44.778236, "process_in_blocks": "0", "process_kernel_time": 0.314977, "process_mem_max_rss": "162234368", "process_out_blocks": "0", "process_user_time": 1.81479}
+[0m23:26:52.662073 [debug] [MainThread]: Command `dbt run` succeeded at 23:26:52.662015 after 44.78 seconds
+[0m23:26:52.662337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e6adf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a10dd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10863e790>]}
+[0m23:26:52.662602 [debug] [MainThread]: Flushing usage events
+[0m23:26:54.753135 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:27:41.590827 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bd6edc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cdfe190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cdfe460>]}
+
+
+============================== 23:27:41.593816 | cf31c5ea-2303-413b-920c-d766d6106a33 ==============================
+[0m23:27:41.593816 [info ] [MainThread]: Running with dbt=1.10.11
+[0m23:27:41.594166 [debug] [MainThread]: running dbt with arguments {'log_path': '/Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/logs', 'profiles_dir': '/Users/nguyentri/.dbt', 'use_experimental_parser': 'False', 'no_print': 'None', 'indirect_selection': 'eager', 'warn_error': 'None', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'version_check': 'True', 'use_colors': 'True', 'log_format': 'default', 'introspect': 'True', 'empty': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'quiet': 'False', 'partial_parse': 'True', 'printer_width': '80', 'write_json': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --select mart'}
+[0m23:27:41.891031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10da855e0>]}
+[0m23:27:41.926030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cdb44c0>]}
+[0m23:27:41.926720 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m23:27:42.034834 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m23:27:42.152184 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:27:42.152433 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:27:42.191935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0b5130>]}
+[0m23:27:42.267579 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m23:27:42.268869 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m23:27:42.279801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0e17c0>]}
+[0m23:27:42.280100 [info ] [MainThread]: Found 14 models, 1 operation, 10 data tests, 7 sources, 594 macros
+[0m23:27:42.280314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dbc8040>]}
+[0m23:27:42.281190 [info ] [MainThread]: 
+[0m23:27:42.281408 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m23:27:42.281584 [info ] [MainThread]: 
+[0m23:27:42.281868 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m23:27:42.284794 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS'
+[0m23:27:42.323474 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS"
+[0m23:27:42.323741 [debug] [ThreadPool]: On list_BI_CLASS: show terse schemas in database BI_CLASS
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS"} */
+[0m23:27:42.323943 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:27:43.348424 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.024 seconds
+[0m23:27:43.353645 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_BI_CLASS, now list_BI_CLASS_DW)
+[0m23:27:43.361241 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_BI_CLASS_STAGING'
+[0m23:27:43.382096 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_DW"
+[0m23:27:43.380428 [debug] [ThreadPool]: Using snowflake connection "list_BI_CLASS_STAGING"
+[0m23:27:43.382646 [debug] [ThreadPool]: On list_BI_CLASS_DW: show objects in BI_CLASS.DW
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_DW"} */;
+[0m23:27:43.382931 [debug] [ThreadPool]: On list_BI_CLASS_STAGING: show objects in BI_CLASS.STAGING
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "list_BI_CLASS_STAGING"} */;
+[0m23:27:43.383381 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:27:43.541299 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.158 seconds
+[0m23:27:43.851361 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 0.468 seconds
+[0m23:27:43.858364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a66b940>]}
+[0m23:27:43.870459 [debug] [MainThread]: Writing injected SQL for node "operation.bi_dw.bi_dw-on-run-start-0"
+[0m23:27:43.875790 [info ] [MainThread]: 1 of 1 START hook: bi_dw.on-run-start.0 ........................................ [RUN]
+[0m23:27:43.876420 [debug] [MainThread]: Using snowflake connection "master"
+[0m23:27:43.876779 [debug] [MainThread]: On master: alter session set DATE_INPUT_FORMAT = 'AUTO'
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "connection_name": "master"} */;
+[0m23:27:43.877123 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:27:45.451679 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.574 seconds
+[0m23:27:45.454773 [info ] [MainThread]: 1 of 1 OK hook: bi_dw.on-run-start.0 ........................................... [[32mOK[0m in 1.60s]
+[0m23:27:45.455596 [info ] [MainThread]: 
+[0m23:27:45.460371 [debug] [Thread-1  ]: Began running node model.bi_dw.dim_channel
+[0m23:27:45.460951 [debug] [Thread-2  ]: Began running node model.bi_dw.dim_customer
+[0m23:27:45.461827 [info ] [Thread-1  ]: 1 of 7 START sql table model DW.dim_channel .................................... [RUN]
+[0m23:27:45.462506 [debug] [Thread-3  ]: Began running node model.bi_dw.dim_date
+[0m23:27:45.463167 [info ] [Thread-2  ]: 2 of 7 START sql table model DW.dim_customer ................................... [RUN]
+[0m23:27:45.463766 [debug] [Thread-4  ]: Began running node model.bi_dw.dim_product
+[0m23:27:45.464386 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_BI_CLASS_DW, now model.bi_dw.dim_channel)
+[0m23:27:45.465039 [info ] [Thread-3  ]: 3 of 7 START sql table model DW.dim_date ....................................... [RUN]
+[0m23:27:45.465609 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly list_BI_CLASS_STAGING, now model.bi_dw.dim_customer)
+[0m23:27:45.466215 [info ] [Thread-4  ]: 4 of 7 START sql table model DW.dim_product .................................... [RUN]
+[0m23:27:45.466765 [debug] [Thread-1  ]: Began compiling node model.bi_dw.dim_channel
+[0m23:27:45.467381 [debug] [Thread-3  ]: Acquiring new snowflake connection 'model.bi_dw.dim_date'
+[0m23:27:45.467837 [debug] [Thread-2  ]: Began compiling node model.bi_dw.dim_customer
+[0m23:27:45.468933 [debug] [Thread-4  ]: Acquiring new snowflake connection 'model.bi_dw.dim_product'
+[0m23:27:45.482633 [debug] [Thread-3  ]: Began compiling node model.bi_dw.dim_date
+[0m23:27:45.486362 [debug] [Thread-1  ]: Writing injected SQL for node "model.bi_dw.dim_channel"
+[0m23:27:45.490232 [debug] [Thread-2  ]: Writing injected SQL for node "model.bi_dw.dim_customer"
+[0m23:27:45.490578 [debug] [Thread-4  ]: Began compiling node model.bi_dw.dim_product
+[0m23:27:45.493375 [debug] [Thread-3  ]: Writing injected SQL for node "model.bi_dw.dim_date"
+[0m23:27:45.496747 [debug] [Thread-4  ]: Writing injected SQL for node "model.bi_dw.dim_product"
+[0m23:27:45.497353 [debug] [Thread-1  ]: Began executing node model.bi_dw.dim_channel
+[0m23:27:45.497690 [debug] [Thread-3  ]: Began executing node model.bi_dw.dim_date
+[0m23:27:45.497965 [debug] [Thread-2  ]: Began executing node model.bi_dw.dim_customer
+[0m23:27:45.540032 [debug] [Thread-1  ]: Writing runtime sql for node "model.bi_dw.dim_channel"
+[0m23:27:45.540305 [debug] [Thread-4  ]: Began executing node model.bi_dw.dim_product
+[0m23:27:45.540619 [debug] [Thread-3  ]: Writing runtime sql for node "model.bi_dw.dim_date"
+[0m23:27:45.541639 [debug] [Thread-2  ]: Writing runtime sql for node "model.bi_dw.dim_customer"
+[0m23:27:45.543636 [debug] [Thread-4  ]: Writing runtime sql for node "model.bi_dw.dim_product"
+[0m23:27:45.544281 [debug] [Thread-1  ]: Using snowflake connection "model.bi_dw.dim_channel"
+[0m23:27:45.544536 [debug] [Thread-1  ]: On model.bi_dw.dim_channel: create or replace transient table BI_CLASS.DW.dim_channel
+    
+    
+    
+    as (select
+  md5(cast(coalesce(cast(channel as TEXT), '') as TEXT)) as channel_sk,
+  channel
+from (select distinct channel from BI_CLASS.STAGING.stg_sales_order)
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_channel"} */;
+[0m23:27:45.545167 [debug] [Thread-3  ]: Using snowflake connection "model.bi_dw.dim_date"
+[0m23:27:45.545576 [debug] [Thread-3  ]: On model.bi_dw.dim_date: create or replace transient table BI_CLASS.DW.dim_date
+    
+    
+    
+    as (select
+  date_key::varchar                        as date_key,
+  date_actual                              as date,
+  to_number(to_char(date_actual,'YYYY'))   as year_num,
+  to_number(to_char(date_actual,'MM'))     as month_num,
+  to_number(to_char(date_actual,'DD'))     as day_num,
+  month_key::varchar                       as month_key,
+  fiscal_year,
+  fiscal_quarter,
+  month_label,
+  full_date_text
+from BI_CLASS.STAGING.stg_date
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_date"} */;
+[0m23:27:45.545947 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m23:27:45.546444 [debug] [Thread-4  ]: Using snowflake connection "model.bi_dw.dim_product"
+[0m23:27:45.547246 [debug] [Thread-2  ]: Using snowflake connection "model.bi_dw.dim_customer"
+[0m23:27:45.547450 [debug] [Thread-4  ]: On model.bi_dw.dim_product: create or replace transient table BI_CLASS.DW.dim_product
+    
+    
+    
+    as (select
+  md5(cast(coalesce(cast(product_nk as TEXT), '') as TEXT)) as product_sk,
+  product_nk, sku, product_name, color, model, subcategory, category,
+  standard_cost, list_price
+from BI_CLASS.STAGING.stg_product
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_product"} */;
+[0m23:27:45.547934 [debug] [Thread-2  ]: On model.bi_dw.dim_customer: create or replace transient table BI_CLASS.DW.dim_customer
+    
+    
+    
+    as (select
+  md5(cast(coalesce(cast(customer_nk as TEXT), '') as TEXT)) as customer_sk,
+  customer_nk, customer_id, customer_name,
+  city, state_province, country_region, postal_code
+from BI_CLASS.STAGING.stg_customer
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_customer"} */;
+[0m23:27:45.548199 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m23:27:46.625328 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.080 seconds
+[0m23:27:46.666684 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113b8a850>]}
+[0m23:27:46.667554 [info ] [Thread-1  ]: 1 of 7 OK created sql table model DW.dim_channel ............................... [[32mSUCCESS 1[0m in 1.20s]
+[0m23:27:46.668161 [debug] [Thread-1  ]: Finished running node model.bi_dw.dim_channel
+[0m23:27:46.668570 [debug] [Thread-1  ]: Began running node model.bi_dw.dim_reseller
+[0m23:27:46.669022 [info ] [Thread-1  ]: 5 of 7 START sql table model DW.dim_reseller ................................... [RUN]
+[0m23:27:46.669592 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.bi_dw.dim_channel, now model.bi_dw.dim_reseller)
+[0m23:27:46.670001 [debug] [Thread-1  ]: Began compiling node model.bi_dw.dim_reseller
+[0m23:27:46.674108 [debug] [Thread-1  ]: Writing injected SQL for node "model.bi_dw.dim_reseller"
+[0m23:27:46.674780 [debug] [Thread-1  ]: Began executing node model.bi_dw.dim_reseller
+[0m23:27:46.678144 [debug] [Thread-1  ]: Writing runtime sql for node "model.bi_dw.dim_reseller"
+[0m23:27:46.679098 [debug] [Thread-1  ]: Using snowflake connection "model.bi_dw.dim_reseller"
+[0m23:27:46.679415 [debug] [Thread-1  ]: On model.bi_dw.dim_reseller: create or replace transient table BI_CLASS.DW.dim_reseller
+    
+    
+    
+    as (select
+  md5(cast(coalesce(cast(reseller_nk as TEXT), '') as TEXT)) as reseller_sk,
+  reseller_nk, reseller_id, reseller_name, business_type,
+  city, state_province, country_region, postal_code
+from BI_CLASS.STAGING.stg_reseller
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_reseller"} */;
+[0m23:27:46.683781 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 1.135 seconds
+[0m23:27:46.685356 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113b348b0>]}
+[0m23:27:46.685913 [info ] [Thread-2  ]: 2 of 7 OK created sql table model DW.dim_customer .............................. [[32mSUCCESS 1[0m in 1.22s]
+[0m23:27:46.686541 [debug] [Thread-2  ]: Finished running node model.bi_dw.dim_customer
+[0m23:27:46.686892 [debug] [Thread-2  ]: Began running node model.bi_dw.dim_sales_territory
+[0m23:27:46.687286 [info ] [Thread-2  ]: 6 of 7 START sql table model DW.dim_sales_territory ............................ [RUN]
+[0m23:27:46.687614 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly model.bi_dw.dim_customer, now model.bi_dw.dim_sales_territory)
+[0m23:27:46.687882 [debug] [Thread-2  ]: Began compiling node model.bi_dw.dim_sales_territory
+[0m23:27:46.691004 [debug] [Thread-2  ]: Writing injected SQL for node "model.bi_dw.dim_sales_territory"
+[0m23:27:46.691475 [debug] [Thread-2  ]: Began executing node model.bi_dw.dim_sales_territory
+[0m23:27:46.694742 [debug] [Thread-2  ]: Writing runtime sql for node "model.bi_dw.dim_sales_territory"
+[0m23:27:46.695434 [debug] [Thread-2  ]: Using snowflake connection "model.bi_dw.dim_sales_territory"
+[0m23:27:46.695702 [debug] [Thread-2  ]: On model.bi_dw.dim_sales_territory: create or replace transient table BI_CLASS.DW.dim_sales_territory
+    
+    
+    
+    as (select
+  md5(cast(coalesce(cast(salesterritory_nk as TEXT), '') as TEXT)) as salesterritory_sk,
+  salesterritory_nk, region, country, territory_group
+from BI_CLASS.STAGING.stg_sales_territory
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.dim_sales_territory"} */;
+[0m23:27:46.728569 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 1.183 seconds
+[0m23:27:46.730378 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113bc9160>]}
+[0m23:27:46.730897 [info ] [Thread-3  ]: 3 of 7 OK created sql table model DW.dim_date .................................. [[32mSUCCESS 1[0m in 1.26s]
+[0m23:27:46.731336 [debug] [Thread-3  ]: Finished running node model.bi_dw.dim_date
+[0m23:27:46.948775 [debug] [Thread-4  ]: SQL status: SUCCESS 1 in 1.400 seconds
+[0m23:27:46.952751 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113c82c10>]}
+[0m23:27:46.953674 [info ] [Thread-4  ]: 4 of 7 OK created sql table model DW.dim_product ............................... [[32mSUCCESS 1[0m in 1.48s]
+[0m23:27:46.954425 [debug] [Thread-4  ]: Finished running node model.bi_dw.dim_product
+[0m23:27:47.225011 [debug] [Thread-2  ]: SQL status: SUCCESS 1 in 0.529 seconds
+[0m23:27:47.226976 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.547 seconds
+[0m23:27:47.230884 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113b348b0>]}
+[0m23:27:47.233815 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b827040>]}
+[0m23:27:47.234852 [info ] [Thread-2  ]: 6 of 7 OK created sql table model DW.dim_sales_territory ....................... [[32mSUCCESS 1[0m in 0.54s]
+[0m23:27:47.235568 [info ] [Thread-1  ]: 5 of 7 OK created sql table model DW.dim_reseller .............................. [[32mSUCCESS 1[0m in 0.56s]
+[0m23:27:47.236569 [debug] [Thread-2  ]: Finished running node model.bi_dw.dim_sales_territory
+[0m23:27:47.237274 [debug] [Thread-1  ]: Finished running node model.bi_dw.dim_reseller
+[0m23:27:47.238466 [debug] [Thread-3  ]: Began running node model.bi_dw.fct_sales
+[0m23:27:47.239079 [info ] [Thread-3  ]: 7 of 7 START sql table model DW.fct_sales ...................................... [RUN]
+[0m23:27:47.239665 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly model.bi_dw.dim_date, now model.bi_dw.fct_sales)
+[0m23:27:47.240156 [debug] [Thread-3  ]: Began compiling node model.bi_dw.fct_sales
+[0m23:27:47.248666 [debug] [Thread-3  ]: Writing injected SQL for node "model.bi_dw.fct_sales"
+[0m23:27:47.249504 [debug] [Thread-3  ]: Began executing node model.bi_dw.fct_sales
+[0m23:27:47.253141 [debug] [Thread-3  ]: Writing runtime sql for node "model.bi_dw.fct_sales"
+[0m23:27:47.255532 [debug] [Thread-3  ]: Using snowflake connection "model.bi_dw.fct_sales"
+[0m23:27:47.255933 [debug] [Thread-3  ]: On model.bi_dw.fct_sales: create or replace transient table BI_CLASS.DW.fct_sales
+    
+    
+    
+    as (with s as (
+  select s.*, so.channel, so.sales_order, so.sales_order_line
+  from BI_CLASS.STAGING.stg_sales s
+  left join BI_CLASS.STAGING.stg_sales_order so
+    on so.salesorderlinekey = s.salesorderlinekey
+)
+select
+  s.salesorderlinekey,
+
+  od.date_key as order_date_key,
+  dd.date_key as due_date_key,
+  sd.date_key as ship_date_key,
+
+  dp.product_sk,
+  dc.customer_sk,
+  dr.reseller_sk,
+  dst.salesterritory_sk,
+  dch.channel_sk,
+
+  s.sales_order,
+  s.sales_order_line,
+
+  s.order_qty,
+  s.unit_price,
+  s.extended_amount,
+  s.unit_price_discount_pct,
+  s.product_standard_cost,
+  s.total_product_cost,
+  s.sales_amount,
+  (s.sales_amount - s.total_product_cost) as gross_profit
+from s
+left join BI_CLASS.DW.dim_product         dp  on dp.product_nk         = s.product_nk
+left join BI_CLASS.DW.dim_customer        dc  on dc.customer_nk        = s.customer_nk
+left join BI_CLASS.DW.dim_reseller        dr  on dr.reseller_nk        = s.reseller_nk
+left join BI_CLASS.DW.dim_sales_territory dst on dst.salesterritory_nk = s.salesterritory_nk
+left join BI_CLASS.DW.dim_channel         dch on dch.channel           = s.channel
+left join BI_CLASS.DW.dim_date            od  on od.date_key           = s.order_date_key_raw
+left join BI_CLASS.DW.dim_date            dd  on dd.date_key           = s.due_date_key_raw
+left join BI_CLASS.DW.dim_date            sd  on sd.date_key           = s.ship_date_key_raw
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "bi_class_snowflake", "target_name": "dev", "node_id": "model.bi_dw.fct_sales"} */;
+[0m23:27:49.744805 [debug] [Thread-3  ]: SQL status: SUCCESS 1 in 2.488 seconds
+[0m23:27:49.750586 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cf31c5ea-2303-413b-920c-d766d6106a33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113d2d190>]}
+[0m23:27:49.751967 [info ] [Thread-3  ]: 7 of 7 OK created sql table model DW.fct_sales ................................. [[32mSUCCESS 1[0m in 2.51s]
+[0m23:27:49.752938 [debug] [Thread-3  ]: Finished running node model.bi_dw.fct_sales
+[0m23:27:49.755071 [debug] [MainThread]: Connection 'master' was left open.
+[0m23:27:49.755749 [debug] [MainThread]: On master: Close
+[0m23:27:49.893387 [debug] [MainThread]: Connection 'model.bi_dw.dim_reseller' was left open.
+[0m23:27:49.894569 [debug] [MainThread]: On model.bi_dw.dim_reseller: Close
+[0m23:27:50.015861 [debug] [MainThread]: Connection 'model.bi_dw.dim_sales_territory' was left open.
+[0m23:27:50.016245 [debug] [MainThread]: On model.bi_dw.dim_sales_territory: Close
+[0m23:27:50.183654 [debug] [MainThread]: Connection 'model.bi_dw.fct_sales' was left open.
+[0m23:27:50.184820 [debug] [MainThread]: On model.bi_dw.fct_sales: Close
+[0m23:27:50.317874 [debug] [MainThread]: Connection 'model.bi_dw.dim_product' was left open.
+[0m23:27:50.319023 [debug] [MainThread]: On model.bi_dw.dim_product: Close
+[0m23:27:50.452904 [info ] [MainThread]: 
+[0m23:27:50.454307 [info ] [MainThread]: Finished running 1 project hook, 7 table models in 0 hours 0 minutes and 8.17 seconds (8.17s).
+[0m23:27:50.457496 [debug] [MainThread]: Command end result
+[0m23:27:50.499891 [debug] [MainThread]: Wrote artifact WritableManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/manifest.json
+[0m23:27:50.501332 [debug] [MainThread]: Wrote artifact SemanticManifest to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/semantic_manifest.json
+[0m23:27:50.506859 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Volumes/Personal/BIS/BIS - Master/Sem2/DWBI/Data Mining/projects/bi_dw/target/run_results.json
+[0m23:27:50.507130 [info ] [MainThread]: 
+[0m23:27:50.507423 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:27:50.507668 [info ] [MainThread]: 
+[0m23:27:50.507914 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=8
+[0m23:27:50.509912 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 8.960572, "process_in_blocks": "0", "process_kernel_time": 0.318345, "process_mem_max_rss": "166707200", "process_out_blocks": "0", "process_user_time": 2.043035}
+[0m23:27:50.510219 [debug] [MainThread]: Command `dbt run` succeeded at 23:27:50.510160 after 8.96 seconds
+[0m23:27:50.510487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bd6edc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10daae070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2cb760>]}
+[0m23:27:50.510757 [debug] [MainThread]: Flushing usage events
+[0m23:27:52.012513 [debug] [MainThread]: An error was encountered while trying to flush usage events
